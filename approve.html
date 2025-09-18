@@ -7,14 +7,42 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
-    <nav class="sticky-nav">
+    <!-- <nav class="sticky-nav">
         <img src="assests/mess-nav.jpg" alt="Mess Navigation" class="nav-image">
-    </nav>
+    </nav> -->
     <div class="screenshot-container">
-        <img src="assests/approve.jpg" alt="Approve Screen" class="main-image">
+        <div style="position: relative;">
+            <video class="approve-video" autoplay muted playsinline>
+                <source src="assests/Breakfast.mp4" type="video/mp4">
+            </video>
+            <div class="datetime-display" id="datetime" style="position: absolute;"></div>
+        </div>
+        <img src="assests/approvedf.jpg" alt="Approve Screen" class="main-image">
     </div>
-    <footer class="sticky-footer">
+    <!-- <footer class="sticky-footer">
         <img src="assests/foot.jpg" alt="Footer" class="footer-image">
-    </footer>
+    </footer> -->
+    <script>
+        // Set the initial date and time when page loads
+        const now = new Date();
+        const dateOptions = { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric'
+        };
+        const timeOptions = {
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true
+        };
+        const dateString = now.toLocaleDateString('en-US', dateOptions);
+        const timeString = now.toLocaleTimeString('en-US', timeOptions);
+        document.getElementById('datetime').innerHTML = `${dateString}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${timeString}`;
+
+        // Redirect to mess page after 30 seconds
+        setTimeout(function() {
+            window.location.href = 'mess.html';
+        }, 29500);
+    </script>
 </body>
 </html>

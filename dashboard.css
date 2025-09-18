@@ -1,16 +1,40 @@
 body {
   margin: 0;
   padding: 0;
-.screenshot-container {
-  width: 100%;
-  max-width: 100%;
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.datetime-display {
+  position: fixed;
+  top: 49%;
+  left: 42%;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  font-size: 41px;
+  color: rgb(27, 27, 27);
+  background: rgb(249, 249, 249);
+  padding: 10px 16px;
+  border-radius: 8px;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  min-width: 500px;
   height: auto;
   overflow: hidden;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   /* margin-top: 60px;
   margin-bottom: 60px; */
   padding-top: env(safe-area-inset-top); /* For devices with notches */
   padding-bottom: env(safe-area-inset-bottom); /* For devices with home indicators */
 }
+
+
 
 .sticky-footer {
   position: fixed;
@@ -91,6 +115,15 @@ body::-webkit-scrollbar {
   max-width: 100%;
 }
 
+.approve-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  /* margin-bottom: 20px;
+  border-radius: 8px; */
+}
+
 .meal-link {
   position: absolute;
   width: 20%;
@@ -111,8 +144,7 @@ body::-webkit-scrollbar {
   top: 77%;
   width: 35%;
   height: 6%;
-  background-color: rgba(255, 0, 0, 0.3);
-  border: 2px solid red;
+
 }
 
 .lunch-link {
@@ -120,36 +152,63 @@ body::-webkit-scrollbar {
   top: 77%;
   width: 35%;
   height: 6%;
-  background-color: rgba(0, 255, 0, 0.3);
-  border: 2px solid green;
+
 }
 
 .tea-link {
-  left: 12%;
-  top: 86%;
-  width: 35%;
-  height: 6%;
-  background-color: rgba(0, 0, 255, 0.3);
-  border: 2px solid blue;
-}
-
-.dinner-link {
   left: 53%;
   top: 86%;
   width: 35%;
   height: 6%;
-  background-color: rgba(255, 165, 0, 0.3);
-  border: 2px solid orange;
+ 
+}
+
+.dinner-link {
+  left: 12%;
+  top: 86%;
+  width: 35%;
+  height: 6%;
+
 }
 
 .mess-link {
   position: absolute;
-  left: 36%;    /* Adjust these values based on the exact position */
-  top: 74%;     /* of the Mess Food Scanner section in your image */
-  width: 27%;   /* Adjust width as needed */
-  height: 10%;  /* Adjust height as needed */
+  left: 36%;
+  top: 74%;
+  width: 27%;
+  height: 10%;
   cursor: pointer;
-  background-color: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
-  border: 2px solid red;
   z-index: 100;
+}
+
+/* Responsive styles for different screen sizes */
+@media screen and (max-width: 768px) {
+  .sticky-nav, .sticky-footer {
+    position: fixed;
+    width: 100%;
+  }
+  
+  .image-container {
+    width: 100%;
+  }
+  
+  .mess-link {
+    left: 36%;
+    top: 74%;
+    width: 27%;
+    height: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mess-link {
+    left: 36%;
+    top: 74%;
+    width: 27%;
+    height: 10%;
+  }
+  
+  .sticky-nav, .sticky-footer {
+    height: auto;
+  }
 }
