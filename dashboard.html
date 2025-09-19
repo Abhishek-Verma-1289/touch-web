@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard Screenshot</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="/touch-web/manifest.json?v=4">
   <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -20,4 +22,10 @@
     <img src="assests/foot.jpg" alt="Footer" class="footer-image">
   </footer>
 </body>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' })
+      .catch(console.error);
+  }
+</script>
 </html>

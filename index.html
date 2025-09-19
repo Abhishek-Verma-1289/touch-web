@@ -10,7 +10,6 @@
     <meta name="description" content="LPU Touch Food Scanner App">
     <link rel="manifest" href="/touch-web/manifest.json?v=3">
     <link rel="icon" type="image/png" href="/touch-web/assests/logo192.png">
-    <meta http-equiv="refresh" content="0; url=dashboard.html">
     <title>LPU Touch</title>
     <style>
         body {
@@ -33,16 +32,10 @@
     <p>Loading LPU Touch...</p>
     <script>
         if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' })
-                    .then((registration) => {
-                        console.log('ServiceWorker registration successful');
-                    })
-                    .catch((err) => {
-                        console.log('ServiceWorker registration failed: ', err);
-                    });
-            });
+            navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' }).catch(console.error);
         }
+        // Give the browser a moment to fetch the manifest before navigating
+        setTimeout(() => { window.location.replace('dashboard.html'); }, 300);
     </script>
 </body>
 </html>
