@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lpu-touch-v3';
+const CACHE_NAME = 'lpu-touch-v4';
 const urlsToCache = [
     '/touch-web/',
     '/touch-web/index.html',
@@ -19,8 +19,8 @@ const urlsToCache = [
     '/touch-web/assests/mess3.jpg',
     '/touch-web/assests/approvedi.jpg',
     '/touch-web/assests/approvedf.jpg',
-    '/touch-web/assests/logo192.jpg',
-    '/touch-web/assests/logo512.jpg'
+    '/touch-web/assests/logo192.png',
+    '/touch-web/assests/logo512.png'
 ];
 
 self.addEventListener('install', (event) => {
