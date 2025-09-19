@@ -59,9 +59,17 @@
         /* Responsive size for mobile */
         @media screen and (max-width: 480px) {
             .scanner-box {
-                width: 95vw;
-                height: calc(95vw * 1.478); /* keep 460:680 aspect ratio */
+                width: 85vw;  /* reduced from 95vw */
+                height: calc(85vw * 1.478); /* maintain aspect ratio */
                 box-shadow: 0 0 0 9999px rgba(211, 211, 211, 0.5);
+            }
+        }
+        
+        /* Extra small devices */
+        @media screen and (max-width: 360px) {
+            .scanner-box {
+                width: 80vw;  /* even smaller for very small screens */
+                height: calc(80vw * 1.478);
             }
         }
 
