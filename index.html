@@ -8,9 +8,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="LPU Touch">
     <meta name="description" content="LPU Touch Food Scanner App">
-    <link rel="manifest" href="./manifest.json">
-    <link rel="apple-touch-icon" href="./assests/logo192.jpg">
-    <link rel="icon" type="image/jpg" href="./assests/logo192.jpg">
+    <link rel="manifest" href="/touch-web/manifest.json">
+    <link rel="apple-touch-icon" href="/touch-web/assests/logo192.jpg">
+    <link rel="icon" type="image/jpg" href="/touch-web/assests/logo192.jpg">
+    <link rel="mask-icon" href="/touch-web/assests/logo192.jpg" color="#000000">
     <meta http-equiv="refresh" content="0; url=dashboard.html">
     <title>LPU Touch</title>
     <style>
@@ -35,7 +36,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
+                navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' })
                     .then((registration) => {
                         console.log('ServiceWorker registration successful');
                     })

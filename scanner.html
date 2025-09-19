@@ -36,7 +36,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(211, 211, 211, 0.5); /* light grey transparent */
+            background: rgba(43, 43, 43, 0.5); /* light grey transparent */
             z-index: 1;
         }
 
@@ -50,8 +50,8 @@
             height: 680px;
             background: transparent;
             z-index: 2;
-            box-shadow: 0 0 0 9999px rgba(211, 211, 211, 0.5); /* dim outer area */
-            border: 2px solid white; /* border for clarity */
+            box-shadow: 0 0 0 9999px rgba(51, 51, 51, 0.5); /* dim outer area */
+            /* border: 2px solid white; border for clarity */
             box-sizing: border-box;
             overflow: hidden;
         }
@@ -73,7 +73,7 @@
             width: 100%;
             height: 2px;
             background-color: red;
-            animation: scan 3s linear infinite;
+            animation: scan 3s  infinite;
         }
 
         @keyframes scan {
@@ -84,22 +84,27 @@
 
         .bottom-text {
             position: fixed;
-            bottom: 8vh;
+            bottom: 4vh;
             left: 0;
             right: 0;
             text-align: center;
             color: #ffffff;
-            font-size: calc(14px + 1vw);
+            font-size: calc(13px + 1vw);
             z-index: 3;
-            width: 90%;
+            width: 100%;
+            padding: 0 12px;
+            box-sizing: border-box;
             margin: 0 auto;
-            white-space: nowrap;
+            white-space: normal;
+            line-height: 1.2;
+            word-break: break-word;
         }
 
-        @media screen and (max-width: 380px) {
+        @media screen and (max-width: 480px) {
             .bottom-text {
-                font-size: calc(12px + 1vw);
-                bottom: 6vh;
+                font-size: 16px;
+                bottom: 3vh;
+                padding: 0 10px;
             }
         }
     </style>

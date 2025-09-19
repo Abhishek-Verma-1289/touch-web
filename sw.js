@@ -1,26 +1,26 @@
-const CACHE_NAME = 'lpu-touch-v2';
+const CACHE_NAME = 'lpu-touch-v3';
 const urlsToCache = [
-    './',
-    './index.html',
-    './dashboard.html',
-    './mess.html',
-    './scanner.html',
-    './approve.html',
-    './breakfast.html',
-    './lunch.html',
-    './tea.html',
-    './dinner.html',
-    './dashboard.css',
-    './manifest.json',
-    './assests/nav.jpg',
-    './assests/foot.jpg',
-    './assests/dashboard.jpg',
-    './assests/mess.jpg',
-    './assests/mess3.jpg',
-    './assests/approvedi.jpg',
-    './assests/approvedf.jpg',
-    './assests/logo192.jpg',
-    './assests/logo512.jpg'
+    '/touch-web/',
+    '/touch-web/index.html',
+    '/touch-web/dashboard.html',
+    '/touch-web/mess.html',
+    '/touch-web/scanner.html',
+    '/touch-web/approve.html',
+    '/touch-web/breakfast.html',
+    '/touch-web/lunch.html',
+    '/touch-web/tea.html',
+    '/touch-web/dinner.html',
+    '/touch-web/dashboard.css',
+    '/touch-web/manifest.json',
+    '/touch-web/assests/nav.jpg',
+    '/touch-web/assests/foot.jpg',
+    '/touch-web/assests/dashboard.jpg',
+    '/touch-web/assests/mess.jpg',
+    '/touch-web/assests/mess3.jpg',
+    '/touch-web/assests/approvedi.jpg',
+    '/touch-web/assests/approvedf.jpg',
+    '/touch-web/assests/logo192.jpg',
+    '/touch-web/assests/logo512.jpg'
 ];
 
 self.addEventListener('install', (event) => {
