@@ -8,8 +8,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="LPU Touch">
     <meta name="description" content="LPU Touch Food Scanner App">
-    <link rel="manifest" href="/touch-web/manifest.json?v=3">
-    <link rel="icon" type="image/png" href="/touch-web/assests/logo192.png">
+    <link rel="manifest" href="/touch-web/manifest.json">
+    <link rel="icon" type="image/png" href="/touch-web/assets/logo192.png">
     <title>LPU Touch</title>
     <style>
         body {
@@ -31,11 +31,12 @@
 <body>
     <p>Loading LPU Touch...</p>
     <script>
+        // Optional: register service worker early (dashboard will also register)
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' }).catch(console.error);
-        }
-        // Give the browser a moment to fetch the manifest before navigating
-        setTimeout(() => { window.location.replace('dashboard.html'); }, 300);
+                navigator.serviceWorker.register('/touch-web/sw.js', { scope: '/touch-web/' }).catch(console.error);
+            }
+            // Optional redirect: remove or increase delay if you prefer not to auto-redirect
+            // setTimeout(() => { window.location.replace('dashboard.html'); }, 1000);
     </script>
 </body>
 </html>

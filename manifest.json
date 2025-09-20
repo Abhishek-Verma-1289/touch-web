@@ -1,20 +1,20 @@
 {
     "name": "LPU Touch",
     "short_name": "LPU Touch",
-    "start_url": "/touch-web/index.html",
-    "display": "fullscreen",
+    "start_url": "/touch-web/dashboard.html",
+    "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
     "orientation": "portrait",
     "scope": "/touch-web/",
     "icons": [
         {
-            "src": "/touch-web/assests/logo192.png",
+            "src": "/touch-web/assets/logo192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/touch-web/assests/logo512.png",
+            "src": "/touch-web/assets/logo512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
